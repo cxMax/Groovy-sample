@@ -1,0 +1,9 @@
+// a standalone single line comment
+
+/* multiline comment */
+
+/**
+ *  GroovyDoc comment
+ */
+
+#! Shabang line

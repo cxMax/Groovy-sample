@@ -1,0 +1,21 @@
+#! groovy lets you instantiate java.lang.String objects , as well as GStrings groovy.lang.GString
+#! 1. single quoted string
+//this don't support interpolation
+'a single quoted string'
+
+#! 2. string concatenation
+//All the groovy strings can be concatenated with the + operator
+assert 'ab' == 'a' + 'b'
+
+#! 3. triple single quote string
+// triple quote string a multiline
+"""line one
+line two
+line three"""
+//it is possible to strip that character by escaping the newline with a backslash
+def strippedFirstNewline = """\
+line one
+line two
+line three
+"""
+assert !strippedFirstNewline.startsWith("\n")

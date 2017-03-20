@@ -1,0 +1,43 @@
+#! 1.normal identifiers
+/***
+ * valid identifiers
+ */
+def name
+def item3
+def with_underscore
+def $dollarStart
+
+/**
+ * invalid identifiers
+ */
+def 3tier
+def a+b
+def a#b
+
+// all keywords are also valid identifiers when following a dot
+foo.as
+foo.assert
+foo.break
+foo.case
+foo.catch
+
+#! 2.quoted identifiers
+//usage : quoted identifiers appear after the dot of dotted expression, which are forbidden by java but are allowed in groovy
+def map = [:]
+map."an identifier with a sapce and double quotes" = "ALLOWED"
+map.'with-dash-signs-and-single-quotes' = 'ALLOWED'
+assert map.'an identifier with a space and double quotes' == 'ALLOWED'
+assert map.'with-dash-signs-and-single-quotes' == 'ALLOWED'
+
+// groovy provides different string literals.All kinds of strings are actually allowed after the dot
+map.'single quote'
+map."double quote"
+map.'''triple single quote'''
+map."""triple double quote"""
+map./slashy string/
+mpa.$/dollar slashy string/$
+
+//interpolated strings
+def firstname = "Homer";
+map.'Simson-${firstname}' = "Homer Simson"
+assert map.'Simson-Homer' == "Homer Simson"
