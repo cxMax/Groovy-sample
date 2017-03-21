@@ -1,0 +1,6 @@
+/*
+ * usage
+ */
+def colors = [red: '#FF0000', green: '#00FF00', blue: '#0000FF']
+colors['pink'] = '#FF00FF' /* add a new key/value pair */
+colors.yellow  = '#FFFF00' /* add a new key/value pair */

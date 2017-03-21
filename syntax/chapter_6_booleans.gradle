@@ -1,0 +1,3 @@
+def myBooleanVariable = true
+boolean untypedBooleanVar = false
+booleanField = true

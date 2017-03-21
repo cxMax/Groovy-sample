@@ -1,0 +1,51 @@
+#! groovy supports different kinds of integral literals and decimal literals , backed by the usual number types of java
+
+#! 1. integral literals
+// notice you can also use def which will vary the type of the integral number
+byte b = 1
+char c = 2
+short s = 3
+int i = 4
+long l = 5
+// infinite precision
+BigInteger bi = 6
+
+#! 2. alternative none-base 10 representations
+// numbers can also be represented in binary , octal , hexadecimal and decimal bases
+/*
+ * binary numbers start with 0b prefix:
+ */
+int x1 = 0b11
+
+/*
+ * octal literal : specified in the typical format of 0 followed by octal digits
+ */
+int x2 = 077
+
+/*
+ * hexadecimal literal : specified in the typical format of 0x followed by hex digits
+ */
+int x3 = 0x77
+
+#! 3. decimal literal float double bigDecimal are the same
+/*
+ * use exponents
+ */
+assert 1e3 == 1000.0
+
+#! 4. underscore in literals
+long num = 1234_5678_910_123L
+
+#! 5. number type suffixes
+/*
+ *  type          suffix
+ *  BigInteger    G or g
+ *  Long          L or l
+ *  Integer       I or i
+ *  BigDecimal    G or g
+ *  Double        D or d
+ *  Float         F or f
+ */
+
+#! 5. the case of the power operator : ** operator
+assert    2    **   3    instanceof Integer    //  8
