@@ -19,3 +19,72 @@ line two
 line three
 """
 assert !strippedFirstNewline.startsWith("\n")
+
+#! 4.escape character
+'a special sinlge quote : \' needs a backsplash'
+/*
+*  '\t'  tabulation
+*  '\b' backspace
+*  '\n' newline
+*  '\r' carriage return
+*  '\f' formfeed
+*   '\\' backslash
+*   '\'' single quote
+*   '\"' double quote
+*/
+
+#! 5.Unicode escape sequence
+'The Euro currency symbol: \u20AC'
+
+#! 6.string interpolation  placehodler: ${ }
+def name = 'user'
+def greeting = "hello ${name} "
+assert greeting.toString() == 'Hello Guillaume'
+
+//it also suport arithmetic expression in GString
+def sum = "the sum of 2 and 3 equals ${2 + 3}"
+assert sum.toString() == 'The sum of 2 and 3 equals 5'
+
+// statement also support placeholder
+def person = [name:'guillaume' , age:36]
+assert "$person.name is $person.age years old".toString() == 'Guillaume is 36 years old'
+
+#! 7.closure expression ${→} advantage : lazy evaluation
+//more information about closure expression ,you can visit http://attis-wong-163-com.iteye.com/blog/1239819
+def a = "1 + 2 == ${-> 3}"
+assert a.toString() == '1 + 2 == 3'
+
+def b = "1 + 2 == ${ w -> w << 3}"
+assert b.toString() == '1 + 2 == 3'
+
+
+#! 8.interoperability with java
+String takeString(String message) {
+    assert message instanceof String
+    return message
+}
+
+def message = "the message is ${'hello'}"
+assert message instanceof GString
+
+def result = takeString(message)
+assert result instanceof String
+assert result == 'The message is hello'
+
+#! 9.GString and String hashCodes are different,GString can vary,java.lang.String is immutable
+assert "one:${1}".hashCode() != "one:1".hashCode()
+//notice : use GString as map keys should be avoided
+
+#! 10.triple double quoted string are multiline
+
+#! 11.Slashy string which use / as delimiters , and particularly useful for defining regular expressions and patterns
+def color = 'blue'
+def interpolatedSlashy = /a ${color} car/
+assert interpolatedSlashy.toString() == 'a blue car'
+
+#! 12.dollar slashy string which are multiline GString delimited with an opening $/ and a closing $/
+
+#! 13.characters; groovy doesn't have an explicit character literal.
+char c1 = "A"
+def c2 = "b" as char
+def c3 = (char)"c"
