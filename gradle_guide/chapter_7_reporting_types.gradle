@@ -1,0 +1,9 @@
+#! listed below are some of the types which are used when generating reports
+CustomizableHtmlReport
+SingleFileReport
+DirectoryReport
+FindBugsXmlReport
+Report
+Reporting
+ReportContainer
+ReportingExtension
