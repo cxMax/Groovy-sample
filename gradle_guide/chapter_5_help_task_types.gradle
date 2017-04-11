@@ -1,0 +1,9 @@
+#! below are the task types that are available for every gradle project.those task types can also be declared and configured directly in the build script
+TaskReportTask
+ProjectReportTask
+DependencyReportTask
+DependencyInsightReportTask
+PropertyReportTask
+ComponentReport
+DependentComponentsReport
+ModelReport

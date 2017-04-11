@@ -1,0 +1,44 @@
+#! Listed below are the various task types which are available for use in your build script
+AntlrTask // generates parsers from Antlr grammars
+BuildEnvironmentReportTask
+Checkstyle
+CodeNarc
+CompareGradleBuilds
+Copy
+CreateStartScripts // creates start script for launching JVM applications
+Delete
+Ear // assembles an EAR archive
+Exec // executes a command line process
+FindBugs
+GenerateIvyDescriptor
+GenerateMavenPom
+GenerateBuildDashboard
+GradleBuild // executes a gradle build
+GroovyCompile // compiles groovy source file , and optionally , java source files
+HtmlDependencyReportTask
+JacocoReport
+JacocoMerge
+JacocoCoverageVerification
+Jar // assembles a JAR archive
+JavaCompile // compiles java source files
+Javadoc
+JavaExec
+JDepend
+JettyRunWar
+JettyStop
+Pmd
+PublishToIvyRepository
+PublishToMavenRepository
+ScalaCompile // compile Scala source files
+ScalaDoc
+InitBuild
+Sign
+Sync // synchronizes the contents
+Tar
+Test
+TestReport
+Upload // upload the artifacts
+War
+java.sql.Wrapper
+WriteProperties
+Zip

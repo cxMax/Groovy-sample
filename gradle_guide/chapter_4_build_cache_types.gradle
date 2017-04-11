@@ -1,0 +1,4 @@
+#! types used to connect to and configure the build cache :
+BuildCacheConfiguration
+DirectoryBuildCache
+HttpBuildCache
