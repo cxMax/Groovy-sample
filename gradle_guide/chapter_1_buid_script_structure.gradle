@@ -1,0 +1,37 @@
+#! build script structure is made up of statements and script blocks
+#! statements include method calls , property assignments , local variable definitions
+allprojects {
+
+}
+
+artifacts {
+
+}
+
+buildscript {
+
+}
+
+configurations {
+
+}
+
+dependencies {
+
+}
+
+repositories {
+
+}
+
+sourceSets {
+
+}
+
+subprojects {
+
+}
+
+publishing {
+    
+}
