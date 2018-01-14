@@ -1,12 +1,12 @@
-# Groovy-sample
-learn groovy basic syntax , and practice some sample script in this project
+## Learn-Gradle
+因为RePlugin涉及gradle相关知识,所以系统进行学习
 
-## related document
-groovy official syntax :　http://www.groovy-lang.org/syntax.htm
+## roadmap
+* 《Gradle 2 用户指南》中文版 : https://github.com/waylau/Gradle-2-User-Guide
+* 《Gradle 2 用户指南》案例 : https://github.com/waylau/Gradle-2-User-Guide-Demos
+* Gradle blog : https://github.com/davenkin/gradle-learning
 
-## syntax chapter
-1. comments 
-2. keywords
-3. identifiers
-4. strings  
-more information about closure expression : http://attis-wong-163-com.iteye.com/blog/1239819
+## offical
+* groovy official syntax :　http://www.groovy-lang.org/syntax.htm
+
+## License MIT
